@@ -4,14 +4,16 @@ public class Calc {
     public static int run(String expression) {
         int num1;
         int num2;
+        int result=0;
 
         if (expression.contains(" + ")) {
             String[] expressionBits = expression.split(" \\+ ");
 
-            num1 = Integer.parseInt(expressionBits[0]);
-            num2 = Integer.parseInt(expressionBits[1]);
+            for(int i =0 ; i<expressionBits.length; i++){
 
-            return num1 + num2;
+            result += Integer.parseInt(expressionBits[i]);
+            }
+            return result;
 
         } else {
             String[] expressionBits = expression.split(" \\- ");
@@ -19,7 +21,8 @@ public class Calc {
             num1 = Integer.parseInt(expressionBits[0]);
             num2 = Integer.parseInt(expressionBits[1]);
 
-            return num1 - num2;
+
+            return num1 - num2 ;
 
         }
     }
