@@ -10,7 +10,5 @@ public class CalcTest {
     @DisplayName("1 + 1 == 2")
     void t1() {
         assertThat(Calc.run("1 + 1")).isEqualTo(2);
-
-
     }
 }
